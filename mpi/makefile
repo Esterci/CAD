@@ -18,6 +18,9 @@ mpi_count: mpi_count.o
 mpi_isend: mpi_isend.o
 	$(CC) $(CFLAGS) -o mpi_isend mpi_isend.o $(LDFLAGS)
 
+mpi_isend_vector: mpi_isend_vector.o
+	$(CC) $(CFLAGS) -o mpi_isend_vector mpi_isend_vector.o $(LDFLAGS)
+
 mpi_scatter: mpi_scatter.o
 	$(CC) $(CFLAGS) -o mpi_scatter mpi_scatter.o $(LDFLAGS)
 
@@ -44,6 +47,9 @@ mpi_struct: mpi_struct.o
 
 mpi_grid: mpi_grid.o
 	$(CC) $(CFLAGS) -o mpi_grid mpi_grid.o $(LDFLAGS)
+
+mpi_type_vector: mpi_type_vector.o
+	$(CC) $(CFLAGS) -o mpi_type_vector mpi_type_vector.o $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
